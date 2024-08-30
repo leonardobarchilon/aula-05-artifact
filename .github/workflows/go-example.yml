@@ -5,8 +5,8 @@ on:
     branches:
       - main
 
-  env:
-    FILE_NAME: hello-server
+env:
+  FILE_NAME: hello-server
 
 jobs:
   BuildGo:
