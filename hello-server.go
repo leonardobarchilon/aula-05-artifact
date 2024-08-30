@@ -9,6 +9,6 @@ func main() {
 	http.ListenAndServe(":13000", nil)
 }
 
-func HelloServer(w http.ResponseWriter, r *http.request) {
+func HelloServer(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
 }
