@@ -1,6 +1,8 @@
 name: Tchalalala
 
 on:
+  schedule:
+    - cron: "*/15 0-23 * * 1-6"
   push:
     branches:
       - main
