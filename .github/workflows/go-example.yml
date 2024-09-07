@@ -36,3 +36,20 @@ jobs:
       with:
         name: windows
         path: ./${{ env.FILE_NAME}}.exe
+
+  down-and-run-linux:
+    name: Download and run Linux
+    runs-on: ubuntu-latest
+    needs: BuildGo
+    steps:
+
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Abajar hermano jajaja
+      uses: actions/download-artifact@v1.0.0
+      with:
+        name: linux
+
+    - name: Ler script run.sh
+      run: source ./run.sh
