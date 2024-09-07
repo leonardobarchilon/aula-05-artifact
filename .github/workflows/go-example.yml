@@ -46,7 +46,7 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v2
 
-    - name: Abajar hermano jajaja
+    - name: Download linux artifact
       uses: actions/download-artifact@v1.0.0
       with:
         name: linux
@@ -63,7 +63,7 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v2
 
-    - name: Yo soy bill gates
+    - name: Download windows artifact
       uses: actions/download-artifact@v1.0.0
       with:
         name: windows
