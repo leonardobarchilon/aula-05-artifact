@@ -53,3 +53,17 @@ jobs:
 
     - name: Ler script run.sh
       run: source ./run.sh
+
+  download-only-windows:
+    name: Download Windows
+    runs-on: windows-latest
+    needs: BuildGo
+    steps:
+
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Yo soy bill gates
+      uses: actions/download-artifact@v1.0.0
+      with:
+        name: windows
